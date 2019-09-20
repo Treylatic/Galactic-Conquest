@@ -1,2 +1,76 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<groups/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="61" y="81">
+            <group eventID="1" id="-1">
+                <apply-filter comment="false" x="72" y="106">
+                    <ACTOR eid="this" id="0"/>
+                    <filter-hsb comment="false" id="1" x="0" y="0">
+                        <randomfloat comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="360"/>
+                        </randomfloat>
+                    </filter-hsb>
+                </apply-filter>
+                <set-val-19-1 comment="false" x="72" y="143">
+                    <int id="0" val="100"/>
+                </set-val-19-1>
+                <set-val-19-2 comment="false" x="72" y="163">
+                    <int id="0" val="115"/>
+                </set-val-19-2>
+                <say-this comment="false" x="72" y="183">
+                    <int id="0" val="FadeAway"/>
+                </say-this>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <periodic comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <set-opacity comment="false" x="37" y="67">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-19-1 comment="false" id="1" x="0" y="0"/>
+                        </set-opacity>
+                        <scaleTo comment="false" x="37" y="99">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-19-2 comment="false" id="1" x="0" y="0"/>
+                            <get-val-19-2 comment="false" id="2" x="0" y="0"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0"/>
+                        </scaleTo>
+                        <set-val-19-1 comment="false" x="37" y="131">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-val-19-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="10"/>
+                            </minus>
+                        </set-val-19-1>
+                        <set-val-19-2 comment="false" x="37" y="161">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-19-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="10"/>
+                            </plus>
+                        </set-val-19-2>
+                        <if comment="false" x="37" y="191">
+                            <group eventID="2" id="-1">
+                                <die comment="false" x="48" y="221">
+                                    <ACTOR eid="this" id="0"/>
+                                </die>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <get-val-19-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </less>
+                        </if>
+                    </group>
+                    <int id="0" val=".1"/>
+                    <ACTOR eid="this" id="2"/>
+                </periodic>
+            </group>
+            <int id="0" val="FadeAway"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

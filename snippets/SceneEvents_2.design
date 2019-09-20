@@ -1,2 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<groups/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-21-1 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-21-1>
+                <set-val-21-2 comment="false" x="26" y="60">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-21-2>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-21-1 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-21-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-val-21-1>
+                <print comment="false" x="26" y="70">
+                    <get-val-21-1 comment="false" id="0" x="0" y="0"/>
+                </print>
+                <if comment="false" x="26" y="95">
+                    <group eventID="2" id="-1">
+                        <set-val-21-2 comment="false" x="37" y="125">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-21-2>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-21-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="180"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="162">
+                    <group eventID="2" id="-1">
+                        <set-val-21-2 comment="false" x="37" y="192">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-21-2>
+                        <create-actor3 comment="false" x="37" y="217">
+                            <actortype eid="24" id="0"/>
+                            <int id="1" val="200"/>
+                            <int id="2" val="350"/>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <create-actor3 comment="false" x="37" y="244">
+                            <actortype eid="26" id="0"/>
+                            <int id="1" val="400"/>
+                            <int id="2" val="350"/>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-21-2 comment="false" id="0" x="0" y="0"/>
+                        <true comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>
