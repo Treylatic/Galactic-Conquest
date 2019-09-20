@@ -63,16 +63,37 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 class ActorEvents_1 extends ActorScript
 {
+	public var _SlidandIncreasedforSelf:Bool;
+	public var _MovementSpeed:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Slid and Increased for Self", "_SlidandIncreasedforSelf");
+		_SlidandIncreasedforSelf = false;
+		nameMap.set("Movement Speed", "_MovementSpeed");
+		_MovementSpeed = 2.0;
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(20), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				if((actor.getY() >= (getSceneHeight() - 159)))
+				{
+					recycleActor(actor);
+					Engine.engine.setGameAttribute("Lives", ((Engine.engine.getGameAttribute("Lives") : Float) - 1));
+				}
+				recycleActor(actor);
+				Engine.engine.setGameAttribute("Lives", ((Engine.engine.getGameAttribute("Lives") : Float) - 1));
+			}
+		});
 		
 	}
 	

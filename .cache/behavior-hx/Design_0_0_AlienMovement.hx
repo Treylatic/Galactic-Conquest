@@ -133,6 +133,8 @@ at a constant rate. */
 				/* They reached the end. You die. */
 				if((actor.getY() >= (getSceneHeight() - 159)))
 				{
+					recycleActor(actor);
+					Engine.engine.setGameAttribute("Lives", ((Engine.engine.getGameAttribute("Lives") : Float) - 1));
 					reloadCurrentScene(createFadeOut(0.3), createFadeIn(0.3));
 				}
 			}

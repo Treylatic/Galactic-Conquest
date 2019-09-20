@@ -1,2 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <event-collide-actortotype comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="90">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                        <set-game-val-3 comment="false" x="37" y="117">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </minus>
+                        </set-game-val-3>
+                    </group>
+                    <moreeq comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <minus comment="false" id="1" x="0" y="0">
+                            <scene-wh comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </scene-wh>
+                            <int id="1" val="159"/>
+                        </minus>
+                    </moreeq>
+                </if>
+                <die comment="false" x="26" y="159">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+                <set-game-val-3 comment="false" x="26" y="186">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </minus>
+                </set-game-val-3>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actortype eid="20" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="1" id="1">
+        <scene-reload-new comment="false" x="134" y="260">
+            <int id="0" val="0"/>
+            <int id="1" val="0.3"/>
+            <int id="2" val="0"/>
+            <int id="3" val="0.3"/>
+        </scene-reload-new>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

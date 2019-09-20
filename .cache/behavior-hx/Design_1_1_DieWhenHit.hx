@@ -84,6 +84,7 @@ class Design_1_1_DieWhenHit extends ActorScript
 				actor.shout("_customEvent_" + "HandleDeath");
 				recycleActor(actor.getLastCollidedActor());
 				recycleActor(actor);
+				Engine.engine.setGameAttribute("Score", ((Engine.engine.getGameAttribute("Score") : Float) + 10));
 			}
 		});
 		

@@ -75,6 +75,22 @@ class SceneEvents_1 extends SceneScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		Engine.engine.setGameAttribute("Score", 0);
+		Engine.engine.setGameAttribute("Lives", 3);
+		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				g.drawString("" + "Score", 300, 20);
+				g.drawString("" + (Engine.engine.getGameAttribute("Score") : Float), 300, 40);
+				g.drawString("" + "Lives", 400, 40);
+				g.drawString("" + (Engine.engine.getGameAttribute("Lives") : Float), 455, 40);
+			}
+		});
+		
 	}
 	
 	override public function forwardMessage(msg:String)

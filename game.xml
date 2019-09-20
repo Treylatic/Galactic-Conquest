@@ -82,7 +82,9 @@
     </attcats>
     <props/>
     <attributes>
+        <number cid="-1" id="4" name="Score" save="true" value="0"/>
         <boolean cid="-1" id="2" name="Slide and Increase Speed" save="true" value="false"/>
+        <number cid="-1" id="3" name="Lives" save="true" value="3"/>
         <boolean cid="-1" id="0" name="Move Right" save="true" value="true"/>
     </attributes>
     <collisions>
