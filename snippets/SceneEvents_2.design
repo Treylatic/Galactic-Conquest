@@ -12,22 +12,27 @@
             </group>
         </init>
     </group>
+    <group eventID="1" id="1">
+        <set-volume comment="false" x="544" y="49">
+            <int id="0" val="30"/>
+        </set-volume>
+    </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
-        <step comment="false" x="15" y="15">
+        <step comment="false" x="33" y="27">
             <group eventID="2" id="-1">
-                <set-val-21-1 comment="false" x="26" y="40">
+                <set-val-21-1 comment="false" x="44" y="52">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-val-21-1 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="1"/>
                     </plus>
                 </set-val-21-1>
-                <print comment="false" x="26" y="70">
+                <print comment="false" x="44" y="82">
                     <get-val-21-1 comment="false" id="0" x="0" y="0"/>
                 </print>
-                <if comment="false" x="26" y="95">
+                <if comment="false" x="44" y="107">
                     <group eventID="2" id="-1">
-                        <set-val-21-2 comment="false" x="37" y="125">
+                        <set-val-21-2 comment="false" x="55" y="137">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-21-2>
                     </group>
@@ -36,18 +41,18 @@
                         <int id="1" val="180"/>
                     </eq>
                 </if>
-                <if comment="false" x="26" y="162">
+                <if comment="false" x="44" y="174">
                     <group eventID="2" id="-1">
-                        <set-val-21-2 comment="false" x="37" y="192">
+                        <set-val-21-2 comment="false" x="55" y="204">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-21-2>
-                        <create-actor3 comment="false" x="37" y="217">
+                        <create-actor3 comment="false" x="55" y="229">
                             <actortype eid="24" id="0"/>
                             <int id="1" val="200"/>
                             <int id="2" val="350"/>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <create-actor3 comment="false" x="37" y="244">
+                        <create-actor3 comment="false" x="55" y="256">
                             <actortype eid="26" id="0"/>
                             <int id="1" val="400"/>
                             <int id="2" val="350"/>
@@ -61,6 +66,12 @@
                 </if>
             </group>
         </step>
+    </group>
+    <group eventID="2" id="1">
+        <play-sound4 comment="false" x="693" y="40">
+            <int id="0" val="1"/>
+            <sound eid="28" id="1"/>
+        </play-sound4>
     </group>
     <group eventID="2" id="-1"/>
 </groups>

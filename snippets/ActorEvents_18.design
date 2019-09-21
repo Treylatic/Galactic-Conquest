@@ -50,7 +50,7 @@
                         <set-val-19-2 comment="false" x="37" y="161">
                             <plus comment="false" id="0" x="0" y="0">
                                 <get-val-19-2 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="10"/>
+                                <int id="1" val="30"/>
                             </plus>
                         </set-val-19-2>
                         <if comment="false" x="37" y="191">

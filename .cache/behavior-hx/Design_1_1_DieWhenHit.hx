@@ -63,12 +63,15 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 class Design_1_1_DieWhenHit extends ActorScript
 {
+	public var _EnemyCount:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
 		nameMap.set("Actor", "actor");
+		nameMap.set("EnemyCount", "_EnemyCount");
+		_EnemyCount = 0.0;
 		
 	}
 	

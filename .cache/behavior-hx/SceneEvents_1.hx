@@ -64,11 +64,20 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 class SceneEvents_1 extends SceneScript
 {
+	public var _EnemyCount:Float;
+	public var _WaveCount:Float;
+	public var _Lives:Float;
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
 		super();
+		nameMap.set("EnemyCount", "_EnemyCount");
+		_EnemyCount = 0;
+		nameMap.set("WaveCount", "_WaveCount");
+		_WaveCount = 0;
+		nameMap.set("Lives", "_Lives");
+		_Lives = 0.0;
 		
 	}
 	
@@ -77,7 +86,25 @@ class SceneEvents_1 extends SceneScript
 		
 		/* ======================== When Creating ========================= */
 		Engine.engine.setGameAttribute("Score", 0);
-		Engine.engine.setGameAttribute("Lives", 3);
+		_EnemyCount = 32;
+		_WaveCount = 1;
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((_EnemyCount == 0))
+				{
+					runLater(1000 * 1, function(timeTask:TimedTask):Void
+					{
+						_WaveCount = (_WaveCount + 1);
+						reloadCurrentScene(null, createCrossfadeTransition(0));
+						_EnemyCount = 32;
+					}, null);
+				}
+			}
+		});
 		
 		/* ========================= When Drawing ========================= */
 		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
@@ -86,8 +113,33 @@ class SceneEvents_1 extends SceneScript
 			{
 				g.drawString("" + "Score", 300, 20);
 				g.drawString("" + (Engine.engine.getGameAttribute("Score") : Float), 300, 40);
-				g.drawString("" + "Lives", 400, 40);
-				g.drawString("" + (Engine.engine.getGameAttribute("Lives") : Float), 455, 40);
+			}
+		});
+		
+		/* ========================= Type & Type ========================== */
+		addSceneCollisionListener(getActorType(9).ID, getActorType(5).ID, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				_EnemyCount = (_EnemyCount - 1);
+			}
+		});
+		
+		/* ========================= Type & Type ========================== */
+		addSceneCollisionListener(getActorType(9).ID, getActorType(3).ID, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				_EnemyCount = (_EnemyCount - 1);
+			}
+		});
+		
+		/* ========================= Type & Type ========================== */
+		addSceneCollisionListener(getActorType(9).ID, getActorType(7).ID, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				_EnemyCount = (_EnemyCount - 1);
 			}
 		});
 		

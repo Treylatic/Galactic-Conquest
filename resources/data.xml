@@ -35,6 +35,7 @@
             </s>
             <s enabled="true" id="1">
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val="0.0"/>
             </s>
             <s enabled="true" id="2">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -68,6 +69,7 @@
             <poly data="4,2,0,58,0,58,40,2,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <music atlasID="0" desc="" id="29" loop="true" name="Music" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="14" fixedrot="false" fric="0.2" gid="3" id="11" ignoreg="false" inertia="0.01" ldamp="0.0" mass="0.1" name="Particle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="12" static="false">
         <snippets>
             <s enabled="true" id="8">

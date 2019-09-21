@@ -6,9 +6,12 @@
                 <set-game-val-4 comment="false" x="26" y="40">
                     <int id="0" val="0"/>
                 </set-game-val-4>
-                <set-game-val-3 comment="false" x="26" y="60">
-                    <int id="0" val="3"/>
-                </set-game-val-3>
+                <set-val-16-1 comment="false" x="26" y="60">
+                    <int id="0" val="32"/>
+                </set-val-16-1>
+                <set-val-16-2 comment="false" x="26" y="80">
+                    <int id="0" val="1"/>
+                </set-val-16-2>
             </group>
         </init>
     </group>
@@ -26,18 +29,87 @@
                     <int id="1" val="300"/>
                     <int id="2" val="40"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="85">
-                    <int id="0" val="Lives"/>
-                    <int id="1" val="400"/>
-                    <int id="2" val="40"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="105">
-                    <get-game-val-3 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="455"/>
-                    <int id="2" val="40"/>
-                </draw-text>
             </group>
         </draw>
     </group>
     <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="3" id="-1">
+                        <dolater comment="false" x="37" y="70">
+                            <group eventID="3" id="-1">
+                                <set-val-16-2 comment="false" x="48" y="97">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <get-val-16-2 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1"/>
+                                    </plus>
+                                </set-val-16-2>
+                                <scene-reload-through comment="false" x="48" y="127">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </scene-reload-through>
+                                <set-val-16-1 comment="false" x="48" y="154">
+                                    <int id="0" val="32"/>
+                                </set-val-16-1>
+                            </group>
+                            <int id="0" val="1"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-16-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-collide-typetotype comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-val-16-1 comment="false" x="26" y="47">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-16-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </minus>
+                </set-val-16-1>
+            </group>
+            <actortype eid="9" id="0"/>
+            <actortype eid="5" id="1"/>
+        </event-collide-typetotype>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-collide-typetotype comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-val-16-1 comment="false" x="26" y="47">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-16-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </minus>
+                </set-val-16-1>
+            </group>
+            <actortype eid="9" id="0"/>
+            <actortype eid="3" id="1"/>
+        </event-collide-typetotype>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-collide-typetotype comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-val-16-1 comment="false" x="26" y="47">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-16-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </minus>
+                </set-val-16-1>
+            </group>
+            <actortype eid="9" id="0"/>
+            <actortype eid="7" id="1"/>
+        </event-collide-typetotype>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>

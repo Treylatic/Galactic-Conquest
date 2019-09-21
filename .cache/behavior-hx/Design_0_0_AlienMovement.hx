@@ -65,6 +65,7 @@ class Design_0_0_AlienMovement extends ActorScript
 {
 	public var _MovementSpeed:Float;
 	public var _SlidandIncreasedforSelf:Bool;
+	public var _Lives:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
@@ -75,6 +76,8 @@ class Design_0_0_AlienMovement extends ActorScript
 		_MovementSpeed = 2.0;
 		nameMap.set("Slid and Increased for Self", "_SlidandIncreasedforSelf");
 		_SlidandIncreasedforSelf = false;
+		nameMap.set("Lives", "_Lives");
+		_Lives = 0;
 		
 	}
 	
@@ -134,8 +137,7 @@ at a constant rate. */
 				if((actor.getY() >= (getSceneHeight() - 159)))
 				{
 					recycleActor(actor);
-					Engine.engine.setGameAttribute("Lives", ((Engine.engine.getGameAttribute("Lives") : Float) - 1));
-					reloadCurrentScene(createFadeOut(0.3), createFadeIn(0.3));
+					switchScene(GameModel.get().scenes.get(2).getID(), null, createCrossfadeTransition(0));
 				}
 			}
 		});
