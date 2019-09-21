@@ -137,7 +137,7 @@ at a constant rate. */
 				if((actor.getY() >= (getSceneHeight() - 159)))
 				{
 					recycleActor(actor);
-					switchScene(GameModel.get().scenes.get(2).getID(), null, createCrossfadeTransition(0));
+					switchScene(GameModel.get().scenes.get(3).getID(), null, createCrossfadeTransition(0));
 				}
 			}
 		});

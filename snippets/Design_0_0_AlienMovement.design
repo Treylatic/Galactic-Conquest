@@ -143,7 +143,7 @@
                             <ACTOR eid="this" id="0"/>
                         </die>
                         <scene-change-through comment="false" x="37" y="1182">
-                            <scene eid="2" id="0"/>
+                            <scene eid="3" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="0"/>
                         </scene-change-through>

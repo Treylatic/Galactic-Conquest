@@ -62,7 +62,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_2 extends SceneScript
+class SceneEvents_3 extends SceneScript
 {
 	public var _SetTime:Float;
 	public var _StartButton:Bool;
@@ -99,8 +99,7 @@ class SceneEvents_2 extends SceneScript
 				if((_StartButton == true))
 				{
 					_StartButton = false;
-					createRecycledActor(getActorType(24), 200, 350, Script.FRONT);
-					createRecycledActor(getActorType(26), 400, 350, Script.FRONT);
+					createRecycledActor(getActorType(26), 275, 350, Script.FRONT);
 				}
 			}
 		});
